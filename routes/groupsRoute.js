@@ -1,6 +1,7 @@
-const {addGroup} = require("../controllers/groupControllers");
+const {addGroup, getGroups} = require("../controllers/groupControllers");
 const router = require("express").Router();
 
-router.post("/addgroup", addGroup);
+router.post("/", addGroup);
+router.get("/:userId", getGroups);
 
 module.exports = router;

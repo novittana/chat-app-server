@@ -11,10 +11,11 @@ try{
 
 module.exports.getMessages = async  (req, res, next) => {
     try{
+
         const messages = await Message.find({
             conversationId:req.params.conversationId,
-        })
-        res.status(200).json(messages)
+        });
+        res.status(200).json(messages);
     } catch (err) {
         res.status(500).json(err);
     }

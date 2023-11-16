@@ -8,6 +8,8 @@ const groupSchema = new Schema({
         members:
             {type: Array},
         filter:
+            {type: String},
+        admin:
             {type: String}
     },
     {timestamps: true}

@@ -5,7 +5,8 @@ const {Conversation} = require("../models/Conversation");
 module.exports.addConversation = async (req, res) => {
     try {
         const conversation = await Conversation.create({
-            members: [req.body.senderId, req.body.receiverId], filter:"private"
+            members: [req.body.senderId, req.body.receiverId],
+            filter:req.body.filter
         });
         res.status(201).json(conversation);
     } catch (err) {

@@ -11,6 +11,7 @@ const groupsRoute = require("./routes/groupsRoute")
 const app = express();
 require("dotenv").config();
 
+
 app.use(cors());
 app.use(express.json());
 
@@ -86,6 +87,7 @@ io.on("connection", (socket) => {
         removeUser(socket.id);
         io.emit("getUsers", users);
     })
+
 //     global.chatSocket = socket;
 //     socket.on("add-user", (userId) => {
 //         onlineUsers.set(userId, socket.id);

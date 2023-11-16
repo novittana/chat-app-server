@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const conversationSchema = new Schema({
         members:
-            {type: Array},
+            [{type: String}],
         filter:
             {type: String}
     },
